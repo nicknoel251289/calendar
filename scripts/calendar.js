@@ -34,10 +34,10 @@
                         data: ['AM', 'PM']
                     }]
                 ]
+            
             });
             
         }
         var theme, display, lang;
         init();
     })(mobiscroll.$);
-

@@ -25,6 +25,7 @@
     <link href="mobiscroll/css/mobiscroll.wp-light.css" rel="stylesheet" type="text/css" />
     <link href="mobiscroll/css/mobiscroll.mobiscroll-dark.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <link href="styles/calendar.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -33,7 +34,8 @@
         padding: 1em;
         margin: 0;
         font-size: 16px;
-        font-family: 'Audiowide', cursive;
+        /* font-family: 'Audiowide', cursive; */
+        font-family: 'Julius Sans One', sans-serif;
     }
     
     input,
@@ -45,6 +47,8 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: bold;
     }
     </style>
 </head>
@@ -56,6 +60,8 @@
             <label for="event-input" id="event-input-label">Event</label>
             <input type="input" id="event-input" />
             <br />
+            <label for="date-calendar" id="date-calendar-label">Full view</label>
+            <input type="date" id="date-calendar"/>
             <label for="date-input" id="date-input-label">Date</label>
             <input type="text" id="event-date-input"/>
             <br />
