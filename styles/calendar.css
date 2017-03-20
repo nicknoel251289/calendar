@@ -1,19 +1,19 @@
-html {
-    background: #263238;
-    font-size: 112%;
-}
+ html {
+     background: #263238;
+     font-size: 112%;
+ }
 
 #event-container {
     margin: 0 auto;
     width: 35%;
     color: whitesmoke;
 }
-
-#event-input-label {
-    position: relative;
-    top: 10px;
-}
-
+  
+ #event-input-label {
+     position: relative;
+     top: 10px;
+ }
+ 
 #event-input {
     background: whitesmoke;
     border-radius: 4px;
@@ -25,25 +25,25 @@ html {
     position: relative;
     display: block;
     top: 6px;
+ }
+ 
+ #date-calendar {
+     border-radius: 4px;
+     display: inline-block;
+     position: relative;
+     width: 35%;
+     float: left;
+     top: 6px;
+     height: 35px;
+ }
+ 
+ #date-input-label {
+     position: relative;
+     display: block;
+     left: 1%;
+     top: -12px;
 }
-
-#date-calendar {
-    border-radius: 4px;
-    display: inline-block;
-    position: relative;
-    width: 35%;
-    float: left;
-    top: 6px;
-    height: 34px;
-}
-
-#date-input-label {
-    position: relative;
-    display: block;
-    left: 1%;
-    top: -12px;
-}
-
+  
 #event-date-input {
     border-radius: 4px;
     display: inline-block;
@@ -51,60 +51,57 @@ html {
     width: 64%;
     float: right;
     top: -12px;
+ }
+ 
+ #time-input-label {
+     position: relative;
+     top: 2px;
 }
-
-#time-input-label {
-    position: relative;
-    top: 2px;
-}
-
+  
 #event-time-input {
     background: whitesmoke;
     border-radius: 4px;
     position: relative;
     top: 2px;
 }
-
+  
 #save-button {
     width: 100%;
     height: 30px;
-    /* font-family: 'Audiowide', cursive; */
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
     background: #8db3b0;
     border-radius: 4px;
-    font-weight: bold;
     position: relative;
     top: 18px;
-}
-
-@media (max-width: 1350px){
-    html { font-size: 95%; }
-    
-    #event-container {
-        width: 55%;
-    }
-    
-    #save-button {
-        margin: 0 auto;
-        width: 100%;
-        height: 30px;
-        /* font-family: 'Audiowide', cursive; */
-        font-family: 'Julius Sans One', sans-serif;
-    }
-}
-
+ }
+ 
+ @media (max-width: 1350px){
+     html { font-size: 95%; }
+     
+     #event-container {
+         width: 55%;
+     }
+     
+     #save-button {
+         margin: 0 auto;
+         width: 100%;
+         height: 30px;
+         font-family: 'Poiret One', cursive;
+     }
+ }
+  
 @media (max-width: 768px){
     html { font-size: 95%; }
-    
-    #event-container {
-        width: 90%;
-    }
-    
-    #save-button {
+     
+     #event-container {
+         width: 90%;
+     }
+     
+     #save-button {
         margin: 0 auto;
         width: 100%;
         height: 30px;
-        /* font-family: 'Audiowide', cursive; */
-        font-family: 'Julius Sans One', sans-serif;
+        font-family: 'Poiret One', cursive;
     }
-}
+ } 

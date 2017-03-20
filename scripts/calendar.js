@@ -34,10 +34,35 @@
                         data: ['AM', 'PM']
                     }]
                 ]
-            
             });
             
         }
         var theme, display, lang;
         init();
     })(mobiscroll.$);
+
+    mobiscroll.eventcalendar('#date-calendar', {
+    onMonthLoading: function (event, inst) {
+        var year = event.year,
+            month = event.month;
+
+        // Load events for (year, month), (year, month - 1), (year, month + 1)
+        $.ajax({
+            url: 'http://www.example.com/getevents?year=' + year + '&month=' + month,
+            dataType: 'json',
+            success : function (data) {
+
+                var events = [];
+
+                for (var i = 0; i < data.length; i++) {
+                    events.push({
+                        d: new Date(data[i].date), // Make sure that a javascript date object is passed
+                        text: data[i].text
+                    });
+                }
+
+                inst.setEvents(events);
+            }
+        });
+    }
+});
