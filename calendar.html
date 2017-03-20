@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-    <title>Mobiscroll</title>
+    <title>Calendar App</title>
 
     <!-- Mobiscroll CSS Includes -->
     <link href="mobiscroll/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
@@ -24,13 +24,16 @@
     <link href="mobiscroll/css/mobiscroll.android-holo-light.css" rel="stylesheet" type="text/css" />
     <link href="mobiscroll/css/mobiscroll.wp-light.css" rel="stylesheet" type="text/css" />
     <link href="mobiscroll/css/mobiscroll.mobiscroll-dark.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="styles/calendar.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
+    
     body {
         padding: 1em;
         margin: 0;
         font-size: 16px;
-        font-family: arial, verdana, sans-serif;
+        font-family: 'Audiowide', cursive;
     }
     
     input,
@@ -50,19 +53,19 @@
     
     <div id="event-container">
         <form>
-            <label for="event-input" id="event-input-label">Enter the event you want to save</label>
+            <label for="event-input" id="event-input-label">Event</label>
             <input type="input" id="event-input" />
             <br />
-            <label for="date-input" id="date-input-label">Date of the event</label>
-            <input type="text" />
+            <label for="date-input" id="date-input-label">Date</label>
+            <input type="text" id="event-date-input"/>
             <br />
-            <label for="time-input" id="time-input-label">Time of the event</label>
-            <input type="time" id="time-input"/>
+            <label for="time-input" id="time-input-label">Time</label>
+            <input type="text" id="event-time-input"/>
             <br />
             <button id="save-button">Save</button>
         </form>    
     </div>
-    
+    <!--
     <div>
         <label for="theme">Theme</label>
         <select name="theme" id="theme" class="settings">
@@ -85,6 +88,7 @@
             <option value="bottom">Bottom</option>
         </select>
     </div>
+    
     <div>
         <label for="language">Language</label>
         <select name="language" id="language" class="settings">
@@ -112,13 +116,10 @@
             <option value="fa">فارسی</option>
         </select>
     </div>
-
-    <label>
-        Test
-        <input id="test" />
-    </label>
+    -->
 
     <!-- Mobiscroll JS Includes -->
+    
     <script src="mobiscroll/js/mobiscroll.dom.js"></script>
     <script src="mobiscroll/js/mobiscroll.core.js"></script>
     <script src="mobiscroll/js/mobiscroll.scrollview.js"></script>
@@ -153,52 +154,8 @@
     <script src="mobiscroll/js/i18n/mobiscroll.i18n.sv.js"></script>
     <script src="mobiscroll/js/i18n/mobiscroll.i18n.tr.js"></script>
     <script src="mobiscroll/js/i18n/mobiscroll.i18n.zh.js"></script>
+    <script src="scripts/calendar.js"></script>
 
-    <script>
-    (function ($) {
-
-        function init() {
-
-            mobiscroll.scroller('#test', {
-                theme: theme,
-                display: display,
-                lang: lang,
-                wheels: [
-                    [{
-                        label: 'First wheel',
-                        data: ['0', '1', '2', '3', '4', '5', '6', '7']
-                    }, {
-                        label: 'Second wheel',
-                        data: [{
-                            value: 0,
-                            display: 'a'
-                        }, {
-                            value: 1,
-                            display: 'b'
-                        }, {
-                            value: 2,
-                            display: 'c'
-                        }, {
-                            value: 3,
-                            display: 'd'
-                        }]
-                    }]
-                ]
-            });
-        }
-
-        var theme, display, lang;
-
-        $('.settings').on('change', function () {
-            theme = $('#theme').val() || mobiscroll.settings.theme;
-            display = $('#display').val();
-            lang = $('#language').val();
-
-            init();
-        });
-
-        $('#theme').trigger('change');
-    })(mobiscroll.$);
-    </script>
+    
 </body>
 </html>
